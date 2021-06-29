@@ -47,9 +47,9 @@ userinput2="${2}"
 ## GitHub Branch Select
 # Allows for the use of different function files
 # from a different repo and/or branch.
-githubuser="GameServerManagers"
+githubuser="Nizhnikovsky"
 githubrepo="LinuxGSM"
-githubbranch="master"
+githubbranch=" minecraft_vanilla"
 
 # Core function that is required first.
 core_functions.sh(){
@@ -164,10 +164,10 @@ fn_bootstrap_fetch_file_github(){
 	# If master branch will currently running LinuxGSM version to prevent "version mixing". This is ignored if a fork.
 	if [ "${githubbranch}" == "master" ]&&[ "${githubuser}" == "GameServerManager" ]&&[ "${commandname}" != "UPDATE-LGSM" ]; then
 		remote_fileurl="https://raw.githubusercontent.com/${githubuser}/${githubrepo}/${version}/${github_file_url_dir}/${github_file_url_name}"
-		remote_fileurl_backup="https://bitbucket.org/${githubuser}/${githubrepo}/raw/${version}/${github_file_url_dir}/${github_file_url_name}"
+		remote_fileurl_backup="https://github.com/${githubuser}/${githubrepo}/raw/${version}/${github_file_url_dir}/${github_file_url_name}"
 	else
 		remote_fileurl="https://raw.githubusercontent.com/${githubuser}/${githubrepo}/${githubbranch}/${github_file_url_dir}/${github_file_url_name}"
-		remote_fileurl_backup="https://bitbucket.org/${githubuser}/${githubrepo}/raw/${githubbranch}/${github_file_url_dir}/${github_file_url_name}"
+		remote_fileurl_backup="https://github.com/${githubuser}/${githubrepo}/raw/${githubbranch}/${github_file_url_dir}/${github_file_url_name}"
 	fi
 	remote_fileurl_name="GitHub"
 	remote_fileurl_backup_name="Bitbucket"
