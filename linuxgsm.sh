@@ -48,8 +48,8 @@ gittoken="${2}"
 # Allows for the use of different function files
 # from a different repo and/or branch.
 githubuser="Nizhnikovsky"
-githubrepo="LinuxGSM"
-githubbranch=" minecraft_vanilla"
+githubrepo="LinuxGSMFork"
+githubbranch="minecraft_vanilla"
 
 # Core function that is required first.
 core_functions.sh(){
